@@ -1,0 +1,9 @@
+<h1>Upload GPX/TCX file</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="/gps_reader/upload/" method="post">
+    <label>Activity Name:</label><input type="text" name="activity" size="40" /><br />
+    <input type="file" name="gpsfile" size="40" /><br /><br />
+    <input type="submit" value="Upload" />
+</form>
